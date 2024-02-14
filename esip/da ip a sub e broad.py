@@ -10,7 +10,6 @@ def main():
     cidr = int(input("inseire la notazione CIDR: "))
     subnet_mask = "1" * cidr + "0" * (32 - cidr)
     wild_card = "0" * cidr + "1" * (32 - cidr)
-    
     subnet_maskDecimale = '.'.join(str(int(subnet_mask[i:i+8], 2)) for i in range(0, 32, 8))
     wild_cardDecimale = '.'.join(str(int(wild_card[i:i+8], 2)) for i in range(0, 32, 8))
     print(f"SubnetMask: " + subnet_maskDecimale)
